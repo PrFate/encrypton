@@ -1,0 +1,266 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Share Tech', sans-serif;
+}
+
+body {
+  background-color: #364F6B;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+    color: white;
+}
+
+main {
+  padding: 2rem 2.8rem;
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation {
+  width: calc(7rem + 2vw);
+  height: 100vh;
+  background-color: #2D4259;
+  flex-shrink: 0;
+}
+
+.navigation__nav {
+  margin: 1.5rem;
+}
+
+.navigation__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30rem;
+}
+
+.navigation__item {
+  background-color: #364F6B;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+
+.navigation__link,
+.navigation__link:link,
+.navigation__link:visited {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+  vertical-align: sub;
+  cursor: pointer;
+}
+
+.heading--primary {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  letter-spacing: .2rem;
+  display: inline-block;
+}
+
+.cypher-form__textarea,
+.poem-form__key-input {
+  background-color: #426387;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  display: block;
+}
+
+.poem-form-encr,
+.result,
+.result__container,
+.result-decr {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+}
+
+.poem-form__label {
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.poem-form__par {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  margin: 0 1rem 0 0;
+}
+
+.poem-form__label {
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+}
+
+.btn,
+.poem-form__label {
+  width: 20rem;
+  padding: 1rem 1.5rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  transition: all .3s ease;
+}
+
+.btn--green,
+.poem-form__label {
+  background-color: #17B978;
+}
+
+.poem-form__label:hover,
+.btn:hover {
+  transform: translateY(-.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.poem-form__label:active,
+.btn:active {
+  box-shadow: 0 .6rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.7rem;
+}
+
+.poem-form__par {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  margin: 0 1rem 0 0;
+}
+
+.poem-form__textarea {
+  background-color: #426387;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  display: block;
+}
+
+.btn--big {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1.5rem 3.5rem;
+}
+
+.arrow--light-green {
+  margin: 1.3rem 0;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn--deactivate {
+background-color: #2D4259;
+}
+
+.btn-switch {
+  width: 25rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  background-color: #1BDDF2;
+}
+
+.result__result,
+.decr-result {
+  display: block;
+}
+
+.container--1,
+.container--2 {
+  transition: all 1s ease-out;
+}
+
+.poem-form__fl-input {
+  display: none;
+}
+
+.btn-switch {
+  width: 25rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  background-color: #1BDDF2;
+}
+
+.u-text-centered {
+  text-align: center;
+}
+
+.u-margin-top-medium {
+  margin-top: 1.9rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.7rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem;
+}
+
+@media all and (max-width: 778px) {
+  body {
+    flex-direction: column;
+  }
+  .navigation {
+    height: 10rem;
+    width: 100%;
+  }
+  .navigation__list {
+    flex-direction: row;
+  }
+  .flex-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cypher-form__textarea {
+    width: 100%;
+  }
+}

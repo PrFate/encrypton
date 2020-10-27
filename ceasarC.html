@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ceasasr Cipher</title>
+  <script defer type="text/javascript" src='js/ceasarCipher.js'></script>
+  <script defer type="text/javascript" src='js/FileSaver.js'></script>
+  <script defer type="text/javascript" src='js/fileProcessor.js'></script>
+  <script defer type="text/javascript" src='js/ceasarStyle.js'></script>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ceasar.css">
+</head>
+<body>
+  <div class="navigation">
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a class="navigation__link" href="index.html"><img src="images/home.svg" alt="Home page"></a></li>
+        <li class="navigation__item"><a class="navigation__link" href="about.html"><img src="images/users-solid.svg" alt="Home page"></a></li>
+        <li class="navigation__item"><a class="navigation__link" href="poemCipher.html"><img src="images/poem.svg" alt="Home page"></a></li>
+        <li class="navigation__item"><a class="navigation__link" href="about.html"><img src="images/unlock-solid.svg" alt="Home page"></a></li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <section class="left-section">
+      <h1 class="heading--primary">Ceasar Cipher <img src="images/laurel-wreath.svg" alt=""></h1>
+      <a class = "btn btn-switch" href="#">Encryption mode</a>
+      <div class="container container--1">
+        <form class="caesar-form">
+          <div class="flex-group">
+            <p class="ceasar-form__par">Input your message into the text field bellow, or</p>
+            <label for="file-to-encr" class='caesar-form__label u-margin-bottom-small'>Upload a file</label>
+          </div>
+          <input id="file-to-encr" class="ceasar-form__fl-input" type="file" name='file'>
+          <textarea class='cypher-form__textarea' name="msg" rows="8" cols="80"></textarea>
+          <br />
+          <label for="key">Enter key value:</label>
+          <input class = "u-margin-bottom-small" type="number" name="key">
+          <a id='encrypt' class='btn btn--green u-margin-bottom-small' href="#">Encrypt!</a>
+        </form>
+        <br>
+        <p class="result__container u-margin-bottom-small">Encrypted message:</p>
+        <span class='result__result u-margin-bottom-medium'></span>
+      </div>
+      <div class="container container--2 d-none">
+        <form class='ceasar-form-decr'>
+          <div class="flex-group">
+            <p class="ceasar-form__par">Input your message into the text field bellow, or</p>
+            <label for="file-to-decr" class='caesar-form__label u-margin-bottom-small'>Upload a file</label>
+          </div>
+          <input id="file-to-decr" class="ceasar-form__fl-input" type="file" name='file'>
+          <textarea class='cypher-form__textarea' name="msg-decr" rows="8" cols="80"></textarea>
+          <br />
+          <label for="key">Enter key value:</label>
+          <input class = "u-margin-bottom-small" type="number" name="key">
+          <a id='decrypt' class='btn btn--green u-margin-bottom-small' href="#">Decrypt!</a>
+        </form>
+        <br>
+        <p class="result__container u-margin-bottom-small">Decrypted message:</p>
+        <span class="decr-result u-margin-bottom-medium"></span>
+      </div>
+      <a id = 'saveFile' class="btn btn--green btn--big" href="#">Save</a>
+    </section>
+    <section class="right-section">
+      <h2 class="heading--primary u-text-centered">Encoding messages has never been so easy!</h2>
+      <a id = 'btn-1' class="btn btn--green btn--big" href="#">Input data</a>
+      <svg class="arrow--light-green" width="45" height="46" viewBox="0 0 70 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M35.0343 71.0065L4.72845 37.627L64.8911 37.2247L35.0343 71.0065Z" fill="#A7FF83" />
+        <rect x="20" width="30" height="42" fill="#A7FF83" />
+      </svg>
+      <a id = 'btn-2' class="btn btn--deactivate btn--big" href="#">Cipher!</a>
+      <svg class="arrow--light-green" width="45" height="46" viewBox="0 0 70 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M35.0343 71.0065L4.72845 37.627L64.8911 37.2247L35.0343 71.0065Z" fill="#A7FF83" />
+        <rect x="20" width="30" height="42" fill="#A7FF83" />
+      </svg>
+      <a id = 'btn-3' class="btn btn--deactivate btn--big" href="#">Save</a>
+    </section>
+  </main>
+</body>
+</html>

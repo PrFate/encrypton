@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Poem Cipher</title>
+  <script defer type="text/javascript" src="js/poemCipherStyle.js"></script>
+  <script defer type="text/javascript" src='js/FileSaver.js'></script>
+  <script defer type="text/javascript" src='js/fileProcessor.js'></script>
+  <script defer type="text/javascript" src="js/poemCipher.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/poem.css">
+</head>
+
+<body>
+  <div class="navigation">
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a class="navigation__link" href="index.html"><img src="images/home.svg" alt="Home page"></a></li>
+        <li class="navigation__item"><a class="navigation__link" href="about.html"><img src="images/users-solid.svg" alt="Home page"></a></li>
+        <li class="navigation__item"><a class="navigation__link" href="ceasarC.html"><img src="images/laurel-wreath-white.svg" alt=""></a></li>
+        <li class="navigation__item"><a class="navigation__link" href="about.html"><img src="images/unlock-solid.svg" alt="Home page"></a></li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <section class="left-section">
+      <h1 class="heading--primary">Poem Cipher <img src="images/poem-gold.svg" alt=""></h1>
+      <a class = "btn btn-switch" href="#">Encryption mode</a>
+      <div class="form__container form__container--1">
+        <form class='poem-form-encr'>
+          <div class="flex-group">
+            <p class="poem-form__par">Input your message into the text field bellow, or</p>
+            <label for="file-to-encr" class='poem-form__label u-margin-bottom-small'>Upload a file</label>
+          </div>
+          <input id="file-to-encr" class="poem-form__fl-input" type="file" name='file'>
+          <textarea class='cypher-form__textarea' name="msg-encr" rows="8" cols="80"></textarea>
+        </form>
+        <a id='encrypt' class="btn btn--green" href="#">Encrypt!</a>
+        <p class = "result__container u-margin-top-medium">
+          Result:
+          <span class="result"></span>
+        </p>
+      </div>
+      <div class="form__container form__container--2 d-none">
+        <form class='poem-form-decr'>
+          <div class="flex-group">
+            <p class="poem-form__par">Input your message into the text field bellow, or</p>
+            <label for="file-to-decr" class='poem-form__label u-margin-bottom-small'>Upload a file</label>
+          </div>
+          <input id="file-to-decr" class="poem-form__fl-input" type="file" name='file'>
+          <textarea class='cypher-form__textarea' name="msg-decr" rows="8" cols="80"></textarea>
+        </form>
+        <a id='decrypt' class="btn btn--green" href="#"> Decrypt!</a>
+        <p class = "result__container u-margin-top-medium">
+          Result:
+          <span class="result-decr"></span>
+        </p>
+      </div>
+      <a id = 'saveFile' class="btn btn--green btn--big" href="#">Save</a>
+    </section>
+  </main>
+</body>
+
+</html>
